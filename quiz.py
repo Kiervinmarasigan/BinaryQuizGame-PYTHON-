@@ -176,31 +176,7 @@ while True:
                                     num1 = [random.randint(0,10),random.randint(11,20),random.randint(21,30),random.randint(31,40),random.randint(41,50)]
                                     num2 = [random.randint(51,60),random.randint(61,70),random.randint(71,80),random.randint(81,90),random.randint(91,100)]
                                     operation1 = random.choice(['+','-','*','/'])
-                                    print("""\n|-----------------------------------------|
-|                                         |
-|               HARD MODE                 |
-|                                         |
-|-----------------------------------------|
-                                """)
-                                    while hloop <= 4:
-                                        time.sleep(2)
-                                        que = "\n[ {0} ] {1} {2} {3} = 0b?".format(hloop+1,bin(num2[hloop]),bin(ord(operation1)),bin(num1[hloop]))
-                                        print(que)
-                                        ans = input("[ * ] Answer : ")
-                                        if bin(ord('+')) in que:
-                                            bin_ans = bin(num2[hloop]+num1[hloop])
-                                            if bin_ans == ans:
-                                                print("[ + ] Correct")
-                                                hscore+=1
-                                            else:
-                                                print("[ - ] Wrong")
-                                                print("\n[ ANSWER ] {0} + {1} = {2}".format(str(num2[hloop]),str(num1[hloop]),str(num2[hloop]+num1[hloop])))
-                                                print("[ {} ] = {}".format(str(num2[hloop]+num1[hloop]),str(bin(num2[hloop]+num1[hloop]))))
-                                        elif bin(ord('-')) in que:
-                                            bin_ans = bin(num2[hloop]-num1[hloop])
-                                            if bin_ans == ans:
-                                                print("[ + ] Correct")
-                                                hscore+=1
+                                   
                                             else:
                                                 print("[ - ] Wrong")
                                                 print("\n[ ANSWER ] {0} - {1} = {2}".format(str(num2[hloop]),str(num1[hloop]),str(num2[hloop]-num1[hloop])))
