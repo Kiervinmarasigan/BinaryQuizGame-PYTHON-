@@ -63,7 +63,39 @@ while True:
                                     e_randint_bin_list = [bin(random.randint(0,20)),bin(random.randint(21,40)),bin(random.randint(41,60)),bin(random.randint(61,80)),bin(random.randint(81,100))]
                                     score = 0
                                     eloop = 0
-                                    
+                                    print("""\n|-----------------------------------------|
+|                                         |
+|               EASY MODE                 |
+|                                         |
+|-----------------------------------------|
+                                """)
+                                    while eloop <= 4:
+                                        time.sleep(2)
+                                        e_rand_display_list = ['\n[ {} ] Convert {} into Binary'.format(eloop+1,e_randint_list[eloop]),'\n[ {} ] Convert {} into Decimal'.format(eloop+1,e_randint_bin_list[eloop])]
+                                        e_rand_que = random.choice(e_rand_display_list)
+
+                                        print(e_rand_que)
+                                        eanswer = input("[ * ] Enter Answer : ")
+                                        if e_rand_que == e_rand_display_list[0]:
+                                            str_eans = str(eanswer)
+                                            e_int_bin = bin(e_randint_list[eloop])
+                                            if str_eans == e_int_bin:
+                                                print("[ + ] Correct")
+                                                score+=1
+                                            else:
+                                                print("[ - ] Wrong")
+                                                print("\n[ ANSWER ] {}".format(bin(e_randint_list[eloop])))
+                                        else:
+                                            int_eans = int(eanswer)
+                                            if e_randint_bin_list[eloop] == bin(int_eans):
+                                                print("[ + ] Correct")
+                                                score+=1
+                                            else:
+                                                c_str = int(e_randint_bin_list[eloop],2)
+                                                print("[ - ] Wrong")
+                                                print("\n[ ANSWER ] {}".format(str(c_str)))
+                                        eloop+=1
+                                    time.sleep(1)
                                     print("\n [ *EASY* ] Your Score in Easy Mode : {}/5".format(score))
                                     f = c.execute(log,(uname,passw))
                                     for i in f:
