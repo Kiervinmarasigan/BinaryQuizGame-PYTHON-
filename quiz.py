@@ -360,7 +360,29 @@ while True:
 
             elif pick3 == 2:
                 time.sleep(1)
-                
+                print("""\n|-----------------------------------------|
+            }
+|                                         |
+|             MEDIUM MODE                 |
+|                                         |
+|-----------------------------------------|
+                                """)
+                e_sql = "SELECT * FROM info"
+                exe = c.execute(e_sql)
+                a_name_sets = []
+                for exes in exe:
+                    name_set = (exes[1],exes[4])
+                    a_name_sets.append(name_set)
+
+                a_name_sets.sort(key=lambda names:names[1],reverse=True)
+                print("RANK\t NAME\tSCORE")
+                rank1 = 1
+                for rank in a_name_sets:
+                    time.sleep(1)
+                    print(" "+str(rank1)+"\t"+rank[0]+"\t "+str(rank[1]))
+                    rank1+=1
+            elif pick3 == 3:
+                time.sleep(1)
                 print("""\n|-----------------------------------------|
 |                                         |
 |               HARD MODE                 |
