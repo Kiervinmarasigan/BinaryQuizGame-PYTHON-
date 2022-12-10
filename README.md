@@ -3,7 +3,11 @@
 
 > Each mode initialize a random number and question base on the difficulty of the chosen mode.
 
-
+## PROGRAM STRUCTURE
+- LOGIN
+- CREATE ACCOUNT
+- GAME LEADERBOARD
+- EXIT TERMINAL
 
 The workspace contains 1 folder by default, where:
 > quiz.py is the main class.
