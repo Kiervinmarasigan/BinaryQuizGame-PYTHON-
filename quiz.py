@@ -110,7 +110,43 @@ while True:
                                     m_rand_numbers2 = [random.randint(51,60),random.randint(61,70),random.randint(71,80),random.randint(81,90),random.randint(91,100)]
                                     mscore = 0
                                     mloop = 0
-                                    
+                                    print("""\n|-----------------------------------------|
+|                                         |
+|               MEDUIM MODE               |
+|                                         |
+|-----------------------------------------|
+                                """)
+                                    while mloop <= 4:
+                                        time.sleep(2)
+                                        moperation = ['+','-','*','/']
+                                        m_operation_rand = random.choice(moperation)
+                                        print("\n")
+                                        show = (" [ {0} ] {1} {2} {3} = 0b?".format(mloop+1,m_rand_numbers2[mloop],m_operation_rand,m_rand_numbers1[mloop]))
+                                        print(show)
+                                        if '+' in show:
+                                            ans = int(m_rand_numbers2[mloop] + m_rand_numbers1[mloop])
+                                            input_ans = str(input(" [ * ]Enter Answer : "))
+                                            if str(input_ans) == str(bin(ans)):
+                                                print(" [ + ] Correct")
+                                                mscore+=1
+                                            else:
+                                                print(" [ - ] Wrong")
+                                                print("\n[ ANSWER ] {}".format(bin(m_rand_numbers2[mloop]+m_rand_numbers1[mloop])))
+                                        elif '-' in show:
+                                            ans = int(m_rand_numbers2[mloop] - m_rand_numbers1[mloop])
+                                            input_ans = str(input(" [ * ] Enter Answer : "))
+                                            if str(input_ans) == str(bin(ans)):
+                                                print(" [ + ] Correct")
+                                                mscore+=1
+                                            else:
+                                                print(" [ - ] Wrong")
+                                                print("\n[ ANSWER ] {}".format(bin(m_rand_numbers2[mloop] - m_rand_numbers1[mloop])))
+                                        elif '*' in show:
+                                            ans = int(m_rand_numbers2[mloop] * m_rand_numbers1[mloop])
+                                            input_ans = str(input(" [ * ] Enter Answer : "))
+                                            if str(input_ans) == str(bin(ans)):
+                                                print(" [ + ] Correct")
+                                                mscore+=1
                                             else:
                                                 print("[ - ] Wrong")
                                                 print("\n[ ANSWER ] {}".format(bin(m_rand_numbers2[mloop] * m_rand_numbers1[mloop])))
