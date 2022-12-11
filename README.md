@@ -25,5 +25,5 @@ Meanwhile, the compiled output files will be generated in the folder by default.
 ## UML Structure link
 - To view the structure of our UML, kindly click the link below.
 
-> shorturl.at/JQV03
+> https://rb.gy/a6ossr
 
