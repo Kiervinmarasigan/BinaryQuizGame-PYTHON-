@@ -8,6 +8,7 @@
 - CREATE ACCOUNT
 - GAME LEADERBOARD
 - EXIT TERMINAL
+- USES A DATABASE SQLITE
 
 The workspace contains 1 folder by default, where:
 > quiz.py is the main class.
