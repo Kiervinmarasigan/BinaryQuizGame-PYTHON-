@@ -18,6 +18,8 @@ Meanwhile, the compiled output files will be generated in the folder by default.
 > If you want to customize or download the folder structure, open and click the code in the upper right and download as ZIP.
 
 ## Video Presentation
+![Screenshot (498)](https://user-images.githubusercontent.com/113868606/206932683-70f0a95c-ae46-416f-bfad-22d473b0991b.png)
+
 
 - The group also posted a video on their channel so you could check the presentation of the actual program, the link was provided below:
 > https://youtu.be/rn7HuUreS6k
