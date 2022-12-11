@@ -273,7 +273,90 @@ while True:
                     break
                 else:
                     time.sleep(1)
-                 
+                    print("""\n|-----------------------------------------|
+|                                         |
+|            YOU DON'T HAVE               |
+|              AN ACCOUNT                 |
+|                                         |
+|-----------------------------------------|
+                                """)
+        login()
+
+    elif pick == '2':
+        time.sleep(1)
+        def create_acc():
+            
+            print("""\n|-----------------------------------------|
+|                                         |
+|            CREATE ACCOUNT               |
+|                                         |
+|-----------------------------------------|
+                                """)
+            c_uname = input("Enter Username : ")
+            c_passw = input("Enter Password : ")
+            if len(c_passw) >= 8:
+                find_same = "SELECT * FROM info WHERE username = ? AND password = ?"
+                c.execute(find_same,(c_uname,c_passw))
+                if c.fetchall():
+                    time.sleep(1)
+                    print("""\n|-----------------------------------------|
+|                                         |
+|  YOUR USERNAME AND PASSWORD ARE TAKEN   |
+|                                         |
+|-----------------------------------------|
+                                """)
+                else:
+                    time.sleep(1)
+                    insert = "INSERT INTO info(username,password,easy,medium,hard)VALUES(?,?,?,?,?)"
+                    c.execute(insert,(c_uname,c_passw,0,0,0))
+                    print("""\n|-----------------------------------------|
+|                                         |
+|  YOUR ACCOUNT WAS SUCCESSFULLY CREATED  |
+|                                         |
+|-----------------------------------------|
+                                """)
+                    conn.commit()
+        create_acc()
+        banner()
+        continue
+        
+    elif pick == '3':
+        while True:
+            time.sleep(1)
+            print("""\n|-----------------------------------------|
+|                                         |
+|                SCORES                   |
+|                                         |
+|-----------------------------------------|
+
+     [ 1 ] EASY MODE
+     [ 2 ] MEDIUM MODE
+     [ 3 ] HARD MODE
+     [ 4 ] EXIT
+                                """)
+
+            pick3 = int(input("Enter Number : "))
+            if pick3 == 1:
+                print("""\n|-----------------------------------------|
+|                                         |
+|               EASY MODE                 |
+|                                         |
+|-----------------------------------------|
+                                """)
+                e_sql = "SELECT * FROM info"
+                exe = c.execute(e_sql)
+                a_name_sets = []
+                for exes in exe:
+                    name_set = (exes[1],exes[3])
+                    a_name_sets.append(name_set)
+
+                a_name_sets.sort(key=lambda names:names[1],reverse=True)
+                print("RANK\t NAME\tSCORE")
+                rank1 = 1
+                for rank in a_name_sets:
+                    time.sleep(1)
+                    print(" "+str(rank1)+"\t"+rank[0]+"\t "+str(rank[1]))
+                    rank1+=1
 
             elif pick3 == 2:
                 time.sleep(1)
