@@ -21,3 +21,7 @@ Meanwhile, the compiled output files will be generated in the folder by default.
 
 - The group also posted a video on their channel so you could check the presentation of the actual program, the link was provided below:
 > https://youtu.be/rn7HuUreS6k
+
+## UML Structure link
+
+> https://lucid.app/lucidchart/77224b98-0b8d-4d78-a9a1-5c23bf33eedf/edit?viewport_loc=-385%2C-233%2C2520%2C1250%2CHWEp-vi-RSFO&invitationId=inv_0f621f2d-ad60-423e-b65f-cd4eb8454c4d
