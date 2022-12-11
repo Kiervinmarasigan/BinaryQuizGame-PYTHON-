@@ -23,6 +23,8 @@ Meanwhile, the compiled output files will be generated in the folder by default.
 > https://youtu.be/rn7HuUreS6k
 
 ## UML Structure link
+![Screenshot (496)](https://user-images.githubusercontent.com/113868606/206932320-85a75734-fb74-47ae-a4b3-38ed86dba185.png)
+
 - To view the structure of our UML, kindly click the link below.
 
 > https://rb.gy/a6ossr
