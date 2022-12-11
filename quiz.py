@@ -246,59 +246,7 @@ while True:
                             f = c.execute(pro_sql,(uname,passw))
                             for i in f:
                                 time.sleep(1)
-                                print("""|-----------------------------------------------------------|
-|ID : {0}                                                   
-|-----------------------------------------------------------
-|Username : {1}                                             
-|-----------------------------------------------------------
-|Password : {2}                                             
-|-----------------------------------------------------------|
-|  EASY  |   MEDIUM   |   HARD                              |                        
-|-----------------------------------------------------------|
-|   {3}    |    {4}       |   {5}                                 |
-|-----------------------------------------------------------|
-                """.format(str(i[0]),i[1],i[2],str(i[3]),str(i[4]),str(i[5])))
-                            continue
-
-                        elif pick1 == '3':
-                            print("""\n|-----------------------------------------|
-|                                         |
-|               EXIT IN 3s                |
-|                                         |
-|-----------------------------------------|
-                                """)
-                            time.sleep(3)
-                            banner()
-                            break
-                    break
-                else:
-                    time.sleep(1)
-                    print("""\n|-----------------------------------------|
-|                                         |
-|            YOU DON'T HAVE               |
-|              AN ACCOUNT                 |
-|                                         |
-|-----------------------------------------|
-                                """)
-        login()
-
-    elif pick == '2':
-        time.sleep(1)
-        def create_acc():
-            
-            print("""\n|-----------------------------------------|
-|                                         |
-|            CREATE ACCOUNT               |
-|                                         |
-|-----------------------------------------|
-                                """)
-            c_uname = input("Enter Username : ")
-            c_passw = input("Enter Password : ")
-            if len(c_passw) >= 8:
-                find_same = "SELECT * FROM info WHERE username = ? AND password = ?"
-                c.execute(find_same,(c_uname,c_passw))
-                if c.fetchall():
-                    time.sleep(1)
+                               
                     print("""\n|-----------------------------------------|
 |                                         |
 |  YOUR USERNAME AND PASSWORD ARE TAKEN   |
