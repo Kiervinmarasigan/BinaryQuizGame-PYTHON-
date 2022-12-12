@@ -22,7 +22,9 @@ Meanwhile, the compiled output files will be generated in the folder by default.
 
 
 - The group also posted a video on their channel so you could check the presentation of the actual program, the link was provided below:
-> https://youtu.be/rn7HuUreS6k
+> (CODE EXPLANATION) https://youtu.be/rn7HuUreS6k 
+
+> (CODE DEMONSTRATION) https://youtu.be/vBtT0OQzONU
 
 ## UML Structure link
 ![Screenshot (496)](https://user-images.githubusercontent.com/113868606/206932320-85a75734-fb74-47ae-a4b3-38ed86dba185.png)
